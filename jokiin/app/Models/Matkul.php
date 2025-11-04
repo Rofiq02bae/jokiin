@@ -4,24 +4,17 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class matkul extends Model
+class Matkul extends Model
 {
-    use HasFactory;
-
-    /**
-     * post
-     *
-     * @return void
-     */
-
-    // tabel matkul
+    // database matkul
     protected $fillable = [
         'nama_matkul',
         'deadline',
+        'deskripsi',
     ];
 
     public function jokis()
     {
-        return $this->hasMany(joki::class);
+        return $this->hasMany(Joki::class, 'id_matkul');
     }
 }

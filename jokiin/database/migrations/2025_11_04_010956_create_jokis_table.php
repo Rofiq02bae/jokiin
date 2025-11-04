@@ -13,18 +13,13 @@ return new class extends Migration
     {
         Schema::create('jokis', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('user_id');
-            $table->unsignedBigInteger('matkul_id');
+            $table->foreignId('id_user')->constrained('users')->onDelete('cascade');
+            $table->foreignId('id_matkul')->constrained('matkuls')->onDelete('cascade');
             $table->string('status');
-            $table->string('hasil_file');
-            $table->text('deskripsi');
+            $table->decimal('harga', 10, 2);
             $table->timestamps();
-
-            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
-            $table->foreign('matkul_id')->references('id')->on('matkuls')->onDelete('cascade');
         });
     }
-
 
     /**
      * Reverse the migrations.
