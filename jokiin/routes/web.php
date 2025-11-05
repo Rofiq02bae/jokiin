@@ -1,12 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\JokiController;
+use Inertia\Inertia;
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
-
-Route::get('/', [JokiController::class, 'index'])->name('joki.index');
-
-
+Route::get('/', function () {
+    return Inertia::render('home');
+});
