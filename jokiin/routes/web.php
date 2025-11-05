@@ -1,12 +1,17 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\JokiController;
+use Inertia\Inertia;
+use Laravel\Fortify\Features;
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
+Route::get('/', function () {
+    return Inertia::render('welcome');
+})->name('home');
 
-Route::get('/', [JokiController::class, 'index'])->name('joki.index');
+Route::middleware(['auth', 'verified'])->group(function () {
+    Route::get('dashboard', function () {
+        return Inertia::render('dashboard');
+    })->name('dashboard');
+});
 
-
+require __DIR__.'/settings.php';
