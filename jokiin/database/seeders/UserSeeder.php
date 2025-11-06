@@ -2,9 +2,9 @@
 
 namespace Database\Seeders;
 
-use App\Models\User;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use App\Models\User;
 
 class UserSeeder extends Seeder
 {
@@ -13,23 +13,13 @@ class UserSeeder extends Seeder
      */
     public function run(): void
     {
-        //
-        User::create([
-            'name' => 'Joki Satu',
-            'nomor' => '081234567890',
-        ]);
-
-        User::create([
-            'name' => 'Joki Dua',
-            'nomor' => '089876543210',
-        ]);
-        User::create([
-            'name' => 'Joki Tiga',
-            'nomor' => '082233445566',
-        ]);
-        User::create([
-            'name' => 'Joki Empat',
-            'nomor' => '085566778899',
+        // 5 user entries
+        User::insert([
+            ['nama' => 'Alice', 'nomor' => '081234567890'],
+            ['nama' => 'Bob', 'nomor' => '082345678901'],
+            ['nama' => 'Charlie', 'nomor' => '083456789012'],
+            ['nama' => 'Diana', 'nomor' => '084567890123'],
+            ['nama' => 'Ethan', 'nomor' => '085678901234'],
         ]);
     }
 }

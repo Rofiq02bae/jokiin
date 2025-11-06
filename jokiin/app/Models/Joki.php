@@ -6,20 +6,24 @@ use Illuminate\Database\Eloquent\Model;
 
 class Joki extends Model
 {
-    // database joki
+    // database table joki
     protected $fillable = [
         'id_user',
         'id_matkul',
-        'status',
+        'deadline',
+        'deskripsi',
+        'file_path',
         'harga',
+        'status'
     ];
 
     public function user()
     {
-        return $this->belongsTo(User::class, 'id_user');
+        return $this->belongsTo(User::class, 'id_user', 'id');
     }
+
     public function matkul()
     {
-        return $this->belongsTo(Matkul::class, 'id_matkul');
+        return $this->belongsTo(Matkul::class, 'id_matkul', 'id');
     }
 }

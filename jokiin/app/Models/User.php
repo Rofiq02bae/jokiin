@@ -6,13 +6,14 @@ use Illuminate\Database\Eloquent\Model;
 
 class User extends Model
 {
-
+    // database table users
     protected $fillable = [
         'nama',
-        'nomor',
+        'nomor'
     ];
+
     public function jokis()
     {
-        return $this->hasMany(joki::class, 'id_user');
+        return $this->hasMany(Joki::class, 'id_user', 'id');
     }
 }
