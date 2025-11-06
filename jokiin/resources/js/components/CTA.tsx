@@ -1,5 +1,5 @@
 import { motion } from "motion/react";
-import { Phone, Mail, MessageCircle, ArrowRight } from "lucide-react";
+import { Phone, Mail, MessageCircle, ArrowRight, Users, CheckCircle, Clock } from "lucide-react";
 import { Button } from "./ui/button";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
 
@@ -83,7 +83,14 @@ export function CTA() {
                 </div>
                 <div>
                   <div className="text-sm text-blue-200">WhatsApp</div>
-                  <div className="text-lg"><a href="https://wa.me/+6281568389940">Chat dengan kami</a></div>
+                  <a
+                    href="https://wa.me/6281568389940"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-lg hover:underline"
+                  >
+                    Chat dengan kami
+                  </a>
                 </div>
               </motion.div>
             </div>
@@ -96,11 +103,21 @@ export function CTA() {
               transition={{ delay: 0.5 }}
               className="flex flex-col sm:flex-row gap-4"
             >
-              <Button size="lg" href="https://wa.me/+6281568389940" className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-6 text-lg shadow-xl">
-                Mulai Konsultasi
-                <ArrowRight className="ml-2 h-5 w-5" />
+              <Button
+                size="lg"
+                asChild
+                className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-6 text-lg shadow-xl"
+              >
+                <a
+                  href="https://wa.me/6281568389940"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-center"
+                >
+                  Mulai Konsultasi
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </a>
               </Button>
-
             </motion.div>
           </motion.div>
 
@@ -112,27 +129,72 @@ export function CTA() {
             transition={{ duration: 0.8 }}
             className="relative hidden lg:block"
           >
-            {/* <div className="relative rounded-3xl overflow-hidden shadow-2xl">
+            <div className="relative rounded-3xl overflow-hidden shadow-2xl">
               <ImageWithFallback
-                src="https://images.unsplash.com/photo-1556740749-887f6717d7e4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjdXN0b21lciUyMHNlcnZpY2UlMjBoYXBweXxlbnwxfHx8fDE3NjIyNTk2Njh8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
-                alt="Happy Customer Service"
+                src="/images/image1.jpg"
+                alt="Customer Support Team"
                 className="w-full h-auto"
               />
-            </div> */}
+              {/* Gradient Overlay */}
+              <div className="absolute inset-0 bg-gradient-to-t from-blue-900/50 to-transparent" />
+            </div>
 
-            {/* Stats Card */}
+            {/* Stats Cards */}
             <motion.div
               initial={{ opacity: 0, scale: 0.8 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ delay: 0.6 }}
-              className="absolute -bottom-6 -left-6 bg-white text-gray-900 p-6 rounded-2xl shadow-xl"
+              className="absolute -bottom-6 -left-6 bg-white text-gray-900 p-6 rounded-2xl shadow-2xl max-w-[200px]"
             >
-              {/* <div className="text-center">
-                <div className="text-3xl text-blue-600 mb-1">24/7</div>
-                <div className="text-sm text-gray-600">Dukungan Penuh</div>
-              </div> */}
+              <div className="flex items-center gap-3 mb-2">
+                <div className="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center">
+                  <CheckCircle className="h-6 w-6 text-green-600" />
+                </div>
+                <div>
+                  <div className="text-2xl font-bold text-gray-900">500+</div>
+                  <div className="text-sm text-gray-600">Tugas Selesai</div>
+                </div>
+              </div>
             </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, scale: 0.8 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.7 }}
+              className="absolute -top-6 -right-6 bg-white text-gray-900 p-6 rounded-2xl shadow-2xl max-w-[200px]"
+            >
+              <div className="flex items-center gap-3 mb-2">
+                <div className="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center">
+                  <Users className="h-6 w-6 text-blue-600" />
+                </div>
+                <div>
+                  <div className="text-2xl font-bold text-gray-900">200+</div>
+                  <div className="text-sm text-gray-600">Mahasiswa Puas</div>
+                </div>
+              </div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, scale: 0.8 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.8 }}
+              className="absolute bottom-20 -right-4 bg-gradient-to-br from-purple-500 to-blue-500 text-white p-4 rounded-xl shadow-xl"
+            >
+              <div className="flex items-center gap-2">
+                <Clock className="h-5 w-5" />
+                <div>
+                  <div className="text-sm font-semibold">Response Time</div>
+                  <div className="text-xl font-bold">&lt; 5 menit</div>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Decorative Elements */}
+            <div className="absolute -top-4 -left-4 w-20 h-20 bg-yellow-300 rounded-full blur-2xl opacity-50" />
+            <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-pink-300 rounded-full blur-2xl opacity-50" />
           </motion.div>
         </div>
 
