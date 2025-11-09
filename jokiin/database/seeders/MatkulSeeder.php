@@ -13,35 +13,66 @@ class MatkulSeeder extends Seeder
      */
     public function run(): void
     {
-        // 5 matkul entries
+        // 5 matkul entries  
+
+
+
+
+
         Matkul::create([
-            'nama_matkul' => 'Matematika Diskrit',
-            'deadline' => '2024-07-15',
-            'deskripsi' => 'Tugas tentang logika dan himpunan.',
+            'nama_matkul' => 'Ilmu biomedik dasar',
         ]);
 
         Matkul::create([
-            'nama_matkul' => 'Algoritma dan Pemrograman',
-            'deadline' => '2024-07-20',
-            'deskripsi' => 'Tugas tentang struktur data dan algoritma.',
+            'nama_matkul' => 'Keperawatan dasar',
         ]);
 
         Matkul::create([
-            'nama_matkul' => 'Basis Data',
-            'deadline' => '2024-07-25',
-            'deskripsi' => 'Tugas tentang perancangan basis data.',
+            'nama_matkul' => 'Manajemen keperawatan ',
         ]);
 
         Matkul::create([
-            'nama_matkul' => 'Jaringan Komputer',
-            'deadline' => '2024-07-30',
-            'deskripsi' => 'Tugas tentang konsep jaringan komputer.',
+            'nama_matkul' => 'Keperawatan maternitas',
         ]);
 
         Matkul::create([
-            'nama_matkul' => 'Sistem Operasi',
-            'deadline' => '2024-08-05',
-            'deskripsi' => 'Tugas tentang manajemen sistem operasi.',
+            'nama_matkul' => 'Keperawatan medikal bedah ',
+        ]);
+
+        Matkul::create([
+            'nama_matkul' => 'Keperawatan anak ',
+        ]);
+
+        Matkul::create([
+            'nama_matkul' => 'Keperawatan gawat darurat',
+        ]);
+
+        Matkul::create([
+            'nama_matkul' => 'Keperawatan komunitas ',
+        ]);
+        
+        Matkul::create([
+            'nama_matkul' => 'Keperawatan keluarga',
+        ]);
+
+        Matkul::create([
+            'nama_matkul' => 'Keperawatan gerontik',
+        ]);
+
+        Matkul::create([
+            'nama_matkul' => 'Bahasa Inggris',
+        ]);
+
+        Matkul::create([
+            'nama_matkul' => 'Bahasa Arab',
+        ]);
+
+        Matkul::create([
+            'nama_matkul' => 'Karya Tulis Ilmiah',
+        ]);
+
+        Matkul::create([
+            'nama_matkul' => 'Web Programming',
         ]);
     }
 }

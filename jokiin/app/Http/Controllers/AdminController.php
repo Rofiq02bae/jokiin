@@ -41,7 +41,7 @@ class AdminController extends Controller
             return redirect()->route('admin.login');
         }
 
-        $jokis = Joki::with(['user', 'matkul'])
+        $jokis = Joki::with(['user', 'matkul', 'detail'])
             ->orderBy('created_at', 'desc')
             ->get()
             ->map(function ($joki) {
@@ -50,8 +50,8 @@ class AdminController extends Controller
                     'user_nama' => $joki->user->nama,
                     'user_nomor' => $joki->user->nomor,
                     'matkul' => $joki->matkul->nama_matkul,
-                    'deadline' => $joki->deadline,
-                    'deskripsi' => $joki->deskripsi,
+                    'deadline' => $joki->detail ? $joki->detail->deadline : null,
+                    'deskripsi' => $joki->detail ? $joki->detail->deskripsi : null,
                     'file_path' => $joki->file_path,
                     'file_url' => $joki->file_path ? asset('storage/' . $joki->file_path) : null,
                     'harga' => $joki->harga,

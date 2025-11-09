@@ -10,8 +10,6 @@ class Joki extends Model
     protected $fillable = [
         'id_user',
         'id_matkul',
-        'deadline',
-        'deskripsi',
         'file_path',
         'harga',
         'status'
@@ -25,5 +23,10 @@ class Joki extends Model
     public function matkul()
     {
         return $this->belongsTo(Matkul::class, 'id_matkul', 'id');
+    }
+
+    public function detail()
+    {
+        return $this->hasOne(details::class, 'id_joki', 'id');
     }
 }

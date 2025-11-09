@@ -207,7 +207,7 @@ export function CTA() {
           className="mt-16 text-center p-6 bg-white/10 backdrop-blur-sm rounded-2xl"
         >
           <p className="text-lg">
-            🎁 <span className="text-blue-200">Promo Spesial:</span> Konsultasi gratis untuk 10 pendaftar pertama bulan ini!
+            🎁 <span className="text-blue-200">Promo Spesial:</span> potongan harga untuk 10 pendaftar pertama bulan ini!
           </p>
         </motion.div>
       </div>

@@ -52,20 +52,22 @@ class JokiController extends Controller
             $filePath = $file->storeAs('joki_files', $fileName, 'public');
         }
 
-        // Buat atau ambil matkul berdasarkan id
-        $matkul = Matkul::find($validated['id_matkul']);
-
         // Hitung harga berdasarkan kompleksitas atau set default
         $harga = 50000; // Default harga, bisa disesuaikan
 
+        // Buat order joki
         $joki = Joki::create([
             'id_user' => $userId,
             'id_matkul' => $validated['id_matkul'],
-            'deadline' => $validated['deadline'],
-            'deskripsi' => $validated['deskripsi'],
             'file_path' => $filePath,
             'harga' => $harga,
             'status' => 'pending',
+        ]);
+
+        // Buat detail joki (deadline dan deskripsi)
+        $joki->detail()->create([
+            'deadline' => $validated['deadline'],
+            'deskripsi' => $validated['deskripsi'],
         ]);
 
         // Clear session setelah order berhasil

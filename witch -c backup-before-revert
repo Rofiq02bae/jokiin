@@ -1,0 +1,10 @@
+* [33mb5e7924[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mdev-react[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmain[m[33m)[m fix: Remove merge conflict markers from migration files
+*   [33med788fb[m Merge branch 'dev-react' into main
+[32m|[m[33m\[m  
+[32m|[m * [33mbb3b8a4[m[33m ([m[1;31morigin/dev-react[m[33m)[m feat: Add Navbar component for site navigation
+[32m|[m * [33md6c3ef6[m feat: add UI components including Skeleton, Slider, Sonner, Switch, Table, Tabs, Textarea, Toggle Group, Toggle, Tooltip, and utility hooks
+* [33m|[m [33ma23d161[m feat: Refactor views and routes, add new controllers and models
+* [33m|[m [33me32741c[m Merge remote-tracking branch 'origin/master'
+[34m|[m[33m\[m[33m|[m 
+[34m|[m * [33mad5a533[m[33m ([m[1;31morigin/master[m[33m, [m[1;32mmaster[m[33m)[m Add initial project structure and configuration files
+* [33mae93503[m Initial commit

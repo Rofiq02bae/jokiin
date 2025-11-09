@@ -65,12 +65,22 @@ export function Hero() {
               className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
             >
               <Button size="lg" className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-6 text-lg shadow-lg hover:shadow-xl transition-all">
-                <Phone className="mr-2 h-5 w-5" />
-                Hubungi Konsultan
+                <a
+                  href="https://wa.me/6281568389940?text=Halo%20Saya%20tertarik%20dengan%20layanan%20anda"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-center"
+                >
+                  <Phone className="mr-2 h-5 w-5" />
+                  Hubungi Kami
+                </a>
               </Button>
+              {/* Order Button joki */}
               <Button size="lg" variant="outline" className="px-8 py-6 text-lg border-2 hover:bg-gray-50">
-                <Mail className="mr-2 h-5 w-5" />
-                Order Sekarang
+                <a href="/add-joki" className="flex items-center justify-center">
+                  <Mail className="mr-2 h-5 w-5" />
+                  Order Sekarang
+                </a>
               </Button>
             </motion.div>
 
