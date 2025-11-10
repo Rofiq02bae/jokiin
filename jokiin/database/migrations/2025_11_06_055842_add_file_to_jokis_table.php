@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::table('jokis', function (Blueprint $table) {
-            $table->string('file_path')->nullable()->after('deskripsi');
+            $table->string('file_path')->nullable()->after('status');
         });
     }
 
